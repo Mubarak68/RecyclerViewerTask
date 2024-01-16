@@ -13,6 +13,14 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    int kuw = R.drawable.kuwait;
+    int ksa = R.drawable.ksa;
+    int can = R.drawable.canada;
+    int euro = R.drawable.euro;
+    int qat = R.drawable.qatar;
+    int uae = R.drawable.uae;
+    int uk = R.drawable.uk;
+    int us = R.drawable.us;
     RecyclerView currencyRecycleViwer;
     private ArrayList<Currency> currencyArrayList = new ArrayList<>();
     @Override
@@ -33,21 +41,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void addCurrencies(){
-        currencyArrayList.add(new Currency("Kuwait",1,"KWD"));
+        currencyArrayList.add(new Currency(kuw,"Kuwait",1,"KWD"));
         //////////////////////////////////////////////////////////////////////////////////////
-        currencyArrayList.add(new Currency("United States",3.25,"USD"));
+        currencyArrayList.add(new Currency(us,"United States",3.25,"USD"));
         //////////////////////////////////////////////////////////////////////////////////////
-        currencyArrayList.add(new Currency("UAE",11.95,"AED"));
+        currencyArrayList.add(new Currency(uae,"UAE",11.95,"AED"));
         //////////////////////////////////////////////////////////////////////////////////////
-        currencyArrayList.add(new Currency("KSA",12.2,"SR"));
+        currencyArrayList.add(new Currency(ksa,"KSA",12.2,"SR"));
         //////////////////////////////////////////////////////////////////////////////////////
-        currencyArrayList.add(new Currency("Qatar",11.84,"QR"));
+        currencyArrayList.add(new Currency(ksa,"Qatar",11.84,"QR"));
         //////////////////////////////////////////////////////////////////////////////////////
-        currencyArrayList.add(new Currency("United Kingdom",2.57,"SP"));
+        currencyArrayList.add(new Currency(uk,"United Kingdom",2.57,"SP"));
         //////////////////////////////////////////////////////////////////////////////////////
-        currencyArrayList.add(new Currency("Euro",2.98,"ER"));
+        currencyArrayList.add(new Currency(euro,"Euro",2.98,"ER"));
         //////////////////////////////////////////////////////////////////////////////////////
-        currencyArrayList.add(new Currency("Canada",4.38,"CD"));
+        currencyArrayList.add(new Currency(can,"Canada",4.38,"CD"));
 
 
     }

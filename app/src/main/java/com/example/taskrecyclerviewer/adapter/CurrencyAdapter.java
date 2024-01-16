@@ -3,6 +3,7 @@ package com.example.taskrecyclerviewer.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -23,12 +24,16 @@ private ArrayList<Currency> currencyPrice;
         TextView nameTextView;
         TextView exchangeTextView;
         TextView codeTextView;
+        ImageView countryImageView;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.currencyName);
             exchangeTextView = itemView.findViewById(R.id.exchangeRate);
             codeTextView = itemView.findViewById(R.id.currencyCode);
+            countryImageView = itemView.findViewById(R.id.countryImageView);
+
         }
     }
 
@@ -48,9 +53,11 @@ private ArrayList<Currency> currencyPrice;
         String currencyName = currency.getCurrenceyName();
         String currencyCode = currency.getCurrenceyCode();
         double currencyRate = currency.getExchangeRate();
+        int countryImageView = currency.getCountryFlag();
         holder.nameTextView.setText(currencyName);
         holder.exchangeTextView.setText(String.valueOf(currencyRate));
         holder.codeTextView.setText(currencyCode);
+        holder.countryImageView.setImageResource(currency.getCountryFlag());
     }
 
     @Override
